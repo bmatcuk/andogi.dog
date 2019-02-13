@@ -1,0 +1,33 @@
+{
+  "name": "andogi.dog",
+  "version": "1.0.0",
+  "description": "andogi!",
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bmatcuk/andogi.dog.git"
+  },
+  "keywords": [
+    "andogi",
+    "andagi",
+    "dog",
+    "wan"
+  ],
+  "author": "Bob Matcuk",
+  "license": "MIT",
+  "homepage": "https://github.com/bmatcuk/andogi.dog#readme",
+  "scripts": {
+    "start": "brunch watch -s",
+    "build": "rimraf public && brunch build -p"
+  },
+  "devDependencies": {
+    "brunch": "~2.10.17",
+    "brunch-static": "~1.2.1",
+    "html-brunch-static": "~1.4.1",
+    "marked-brunch-static": "~1.1.1",
+    "postcss-brunch": "~2.10.1",
+    "postcss-preset-env": "~6.4.0",
+    "pug-brunch-static": "~3.0.1",
+    "rimraf": "~2.6.2"
+  }
+}

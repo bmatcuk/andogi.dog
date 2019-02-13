@@ -1,0 +1,102 @@
+@custom-selector :--headers h1, h2, h3;
+
+@-ms-viewport {
+  width: device-width;
+}
+
+:root {
+  --light-blue: #00a3a6;
+  --dark-blue: #005859;
+  --mid-grey: #817155;
+  --dark-grey: #272422;
+  --dark-brown: #40332b;
+  --text: #e2eae2;
+  --line-height: 1.3125;
+}
+
+body {
+  background: var(--dark-blue);
+  background:
+    radial-gradient(
+      ellipse closest-corner at center 50vh,
+      var(--light-blue) 0%,
+      var(--dark-blue) 100%
+    ) no-repeat,
+    var(--dark-blue);
+  font-family: 'Merriweather', serif;
+  line-height: var(--line-height);
+  color: var(--text);
+  min-height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+a:any-link {
+  color: var(--text);
+}
+
+a:matches(:any-link, :hover, :active) {
+  text-decoration: none;
+}
+
+:--headers {
+  font-family: 'Lato', sans-serif;
+  letter-spacing: 0.1em;
+}
+
+p {
+  line-height: 1.6;
+  font-size: 1.25em;
+}
+
+section.index {
+  height: 100vh;
+  width: 100%;
+
+  & div.andogi {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    width: 50vw;
+    height: 50vh;
+
+    & img {
+      object-fit: contain;
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  & header,
+  & footer {
+    display: flex;
+    height: 25vh;
+    width: 100%;
+
+    & svg {
+      width: 100%;
+      height: 100%;
+
+      & text {
+        font-family: 'Diplomata SC', cursive;
+        font-size: 4.2rem;
+        fill: var(--text);
+      }
+    }
+  }
+}
+
+section.about {
+  max-width: 40em;
+  margin: 5em auto;
+  text-align: justify;
+
+  & :--headers {
+    text-align: center;
+  }
+
+  & h1 {
+    font-size: 2em;
+  }
+}
